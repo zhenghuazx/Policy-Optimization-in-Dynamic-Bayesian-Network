@@ -13,4 +13,6 @@ including:
     * policy gradient algorithm
 3. deep determininistic policy gradient (notebook/ddpg-fermentation.ipynb)
 
-The algorithms and visualizations used in this package came primarily out of research in Wei Xie' lab at the Washington Northeastern. If you use PABN in your research we would appreciate a citation to the appropriate paper(s):
+
+
+The algorithms and visualizations used in this package came primarily out of research in Wei Xie' lab at the Washington Northeastern. If you use PABN in your research we would appreciate a citation to the appropriate paper [INFORMS Journal of Computing (accepted)]([http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions](https://arxiv.org/pdf/2105.06543.pdf). 
