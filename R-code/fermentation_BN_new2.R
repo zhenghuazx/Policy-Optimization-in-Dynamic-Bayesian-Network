@@ -212,66 +212,6 @@ for (t in 1:n_time){
 }
 
 
-feed_profile_init <- apply(F_S, 2, mean)/1.03
-plot.mean.feedrate=T
-out <- ode(y = initial.state, times = tname, func = bioreactor, parms = parameters)
-plot(out)
-out[,2] = out[,2]/1.15
-out[2,7] = out[2,7]*1.05
-out[3,7] = out[3,7]*1.08
-out[4,7] = out[4,7]*1.11
-out[5,7] = out[5,7]*1.13
-out[6:36,7] = out[6:36,7]*1.15
-out[,4] = out[,4] *1.05
-cases.plot = list()
-for (i in 1:8) {
-  cases.plot[[i]] = as.matrix(cbind(ttname, X_f[i,], C[i,], L[i,], S[i,], N[i,], V[i,]))
-  colnames(cases.plot[[i]]) <- c("time","X_f", "C", "L", "S", "N", "V")
-  rownames(cases.plot[[i]]) <- seq(1,14,1)
-}
-
-library(latex2exp)
-mf <- par(mfrow = c(2, 3))
-  # case = 2
-for (i in 2:7) {
-  if (i == 2) {
-    y.lim = c(0,45)
-  } else if (i == 3) {
-    y.lim = c(0,125)
-  } else if (i == 4) {
-    y.lim = c(0,35)
-  } else if (i == 5) {
-    y.lim = c(0,50)
-  } else if (i == 6) {
-    y.lim = c(0,5)
-  } else {
-    y.lim = c(0.55,1.2)
-  }
-
-  plot(cases.plot[[2]][,1], cases.plot[[2]][,i], pch=16, type = "b", ylim= y.lim, xlab = "time (hr)", ylab = 'g/L', main=TeX(colnames(cases.plot[[1]])[i]), col = 2, cex.lab=1.8,cex.axis=1.5, cex.main=1.8)
-  # matplot(cases.plot[[1]][,1], cases.plot[[1]][,2:7], type = "l", xlab = "time", ylab = "state")
-  lines(cases.plot[[1]][,1], cases.plot[[1]][,i],pch=16, type = "b", col = 3)
-  lines(cases.plot[[3]][,1], cases.plot[[3]][,i],pch=16, type = "b", col = 4)
-  lines(cases.plot[[4]][,1], cases.plot[[4]][,i],pch=16, type = "b", col = 5)
-  lines(cases.plot[[5]][,1], cases.plot[[5]][,i], pch=16,type = "b", col = 6)
-  lines(cases.plot[[6]][,1], cases.plot[[6]][,i],pch=16, type = "b", col = 7)
-  lines(cases.plot[[7]][,1], cases.plot[[7]][,i],pch=16, type = "b", col = 8)
-  lines(cases.plot[[8]][,1], cases.plot[[8]][,i],pch=16, type = "b", col = 9)
-  lines(out[,1], out[,i], col = 1, lwd = 3)
-  if (i == 4) {
-    legend("bottomright", legend=c("Fitted ODE","Batch 1", "Batch 2", "Batch 3", "Batch 4", "Batch 5", "Batch 6", "Batch 7", "Batch 8"),
-           col=c(1:9),lty=c(1,rep(4,8)), pch=c(NA,rep(16,8) ) ) 
-  }
-}
-plot.mean.feedrate=F
-
-
-
-
-# legend("topright", col = 1:6, lty = 1:6, legend = c('X_f', "C", "L", "S", "N", "V"))
-# plot(out[,"P"], out[,"C"], type = "l", lwd = 2, xlab = "producer",
-#      ylab = "consumer")
-
 
 ######################################
 ############## simulation ############
