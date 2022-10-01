@@ -222,7 +222,7 @@ impurity.1 <- purification(S.1, 53.72, 5.23) * impurity
 product.2 <- (1-purification(S.2, 56.27, 42.0))* product.1
 impurity.2 <- (1-purification(S.2, 53.72, 5.23)) * impurity.1
 
-
+plot.mean.feedrate=F
 
 
 # legend("topright", col = 1:6, lty = 1:6, legend = c('X_f', "C", "L", "S", "N", "V"))
