@@ -7,14 +7,14 @@ library(readxl)
 set.seed(10) # 5 batch, seed=100/70,30,10
 ###################################################
 ################# data ###########################
-X170517F3 <- read_excel("~/Research/PHD/project/BN-MDP/BN/170517F3.xlsx")
-X170706F3 <- read_excel("~/Research/PHD/project/BN-MDP/BN/170706F3.xlsx")
-X170517F4 <- read_excel("~/Research/PHD/project/BN-MDP/BN/170517F4.xlsx")
-X170601F3 <- read_excel("~/Research/PHD/project/BN-MDP/BN/170601F3.xlsx")
-X170803F3 <- read_excel("~/Research/PHD/project/BN-MDP/BN/170803F3.xlsx")
-X170721F3 <- read_excel("~/Research/PHD/project/BN-MDP/BN/170721F3.xlsx")
-X171003F3 <- read_excel("~/Research/PHD/project/BN-MDP/BN/171003F3.xlsx")
-X170506F3 <- read_excel("~/Research/PHD/project/BN-MDP/BN/170506F3.xlsx")
+X170517F3 <- read_excel("170517F3.xlsx")
+X170706F3 <- read_excel("170706F3.xlsx")
+X170517F4 <- read_excel("170517F4.xlsx")
+X170601F3 <- read_excel("170601F3.xlsx")
+X170803F3 <- read_excel("170803F3.xlsx")
+X170721F3 <- read_excel("170721F3.xlsx")
+X171003F3 <- read_excel("171003F3.xlsx")
+X170506F3 <- read_excel("170506F3.xlsx")
 # 
 # X170506F3 <- read_csv("170506F3.csv")
 # 
