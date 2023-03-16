@@ -1,6 +1,11 @@
 library(visNetwork)
 library(DAAG)
 library(bnlearn)
+library(ggplot2)
+library(tidyr)
+library(tibble)
+library(dplyr)
+library(forcats)
 
 ggplot(ais, aes(x = sport, y = hg, fill = sport)) + geom_boxplot() # + scale_fill_manual(values = colorRampPalette(king.yna)(10))
 # set boolean variables
